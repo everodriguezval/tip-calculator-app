@@ -4,8 +4,10 @@ const btnContainer = getElement('.btn-tip-container');
 const inputPeople = getElement('.input-number-people');
 const customTip = getElement('#custom-tip');
 const resetBtn = getElement('#reset-btn');
-const tipAmount = getElement('span:first-child');
-const total = getElement('span:last-child');
+const tipAmount = getElement('.tip-to-pay span');
+const totalToPay = getElement('.total-to-pay span');
+console.log(tipAmount);
+console.log(totalToPay);
 
 // Adding event listeners
 inputBill.addEventListener('input', getBillNumber);
@@ -19,9 +21,9 @@ let inputBillValue, tipNumber, numberOfpeople;
 // Customising clicked buttons
 const buttonItems = Array.from(btnContainer.children);
 buttonItems.forEach(button => {
-    button.addEventListener('click', (event) => {
-        if (event.target.classList.contains('filtered')) {
-            event.target.classList.toggle('tip-selected');
+    button.addEventListener('click', (e) => {
+        if (e.target.classList.contains('filtered')) {
+            e.target.classList.toggle('tip-selected');
         } 
     });
 }); 
@@ -69,7 +71,17 @@ function getNumberOfPeople(e) {
 
 function tipCalculation() {
     tipTotal = inputBillValue * ((tipNumber / 100).toFixed(2)) / numberOfpeople;
-    // console.log(tipTotal);
+    totalPerPerson = inputBillValue / numberOfpeople + tipTotal;
+    displayTipAmount(tipTotal);
+    displayTotal(totalPerPerson);
+}
+
+function displayTipAmount(tiptotalPara) {
+    tipAmount.innerHTML = tiptotalPara;
+}
+
+function displayTotal(totalPerPersonPara) {
+    totalToPay.innerHTML = totalPerPersonPara;
 }
 
 function reset() {

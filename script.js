@@ -6,8 +6,6 @@ const customTip = getElement('#custom-tip');
 const resetBtn = getElement('#reset-btn');
 const tipAmount = getElement('.tip-to-pay span');
 const totalToPay = getElement('.total-to-pay span');
-console.log(tipAmount);
-console.log(totalToPay);
 
 // Adding event listeners
 inputBill.addEventListener('input', getBillNumber);
@@ -21,12 +19,14 @@ let inputBillValue, tipNumber, numberOfpeople;
 // Customising clicked buttons
 const buttonItems = Array.from(btnContainer.children);
 buttonItems.forEach(button => {
-    button.addEventListener('click', (e) => {
-        if (e.target.classList.contains('filtered')) {
-            e.target.classList.toggle('tip-selected');
-        } 
-    });
+    button.addEventListener('click', btnClicked);
 }); 
+
+function btnClicked(e) {
+    if (e.target.classList.contains('filtered')) {
+        e.target.classList.toggle('tip-selected');
+    }
+}
 
 // Selecting element from the DOM function
 function getElement(identifier) {
@@ -85,7 +85,17 @@ function displayTotal(totalPerPersonPara) {
 }
 
 function reset() {
- console.log('reset')
-}
-
-
+    inputBill.value = "";
+    inputBillValue = 0;
+    tipNumber = 0;
+    customTip.innerHTML = "";
+    inputPeople.value = "";
+    numberOfpeople = 0;
+    tipAmount.innerHTML = 0.00;
+    totalToPay.innerHTML = 0.00;
+    buttonItems.forEach(button => {
+        if (button.classList.contains('tip-selected')) {
+            button.classList.remove('tip-selected')
+        }
+    });    
+};

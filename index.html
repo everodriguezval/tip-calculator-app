@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Tip Calculator App</title>
+</head>
+<body>
+    <!-- header with app logo -->
+    <header>
+        <img src="./images/logo.svg" alt="calculator logo displaying the name of the app splitter">
+    </header>
+    <main>
+        <!-- Total bill section -->
+        <section>
+            <h3>Bill</h3>
+            <input type="number">
+        </section>
+        <!-- Select tip section -->
+        <section>
+            <h3>Select Tip %</h3>
+            <button>5%</button>
+            <button>10%</button>
+            <button>15%</button>
+            <button>25%</button>
+            <button>50%</button>
+            <button>Custom</button>
+        </section>
+        <!-- Number of people section -->
+        <section>
+            <h3>Number of People</h3>
+            <input type="number">
+        </section>
+        <!-- Calculation section -->
+        <section>
+            <ul>
+                <li>Tip Amount</li>               
+                <li>/ person</li>
+            </ul>
+            <div>$0.00</div>
+            <ul>
+                <li>Total</li>
+                <li>/ person</li>
+            </ul>
+            <div>$0.00</div>
+            <button>Reset</button>
+        </section>
+    </main>
+</body>
+</html>

@@ -22,15 +22,18 @@ body {
     background-color: var(--light-grayish-cyan);
 }
 
+/* Logo */
 header img {
     display: block;
     margin: 2rem auto;
 }
 
+/* Main section */
 main {
     background-color: var(--white);
-    border-radius: 20px;
     padding: 2rem;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
 }
 
 section h3 {
@@ -46,11 +49,16 @@ section input {
     background-color: var(--very-light-cyan);
 }
 
+/* tip section */
 input[type="button"] {
     background-color: var(--very-dark-cyan);
     color: var(--white);   
     padding: 0.5rem 2rem;
     width: 45%; 
+}
+
+input[type="button"]:focus {
+    background-color: var(--strong-cyan);
 }
 
 input[type="number"] {
@@ -63,6 +71,7 @@ input[type="number"] {
     color: var(--very-dark-cyan);
 }
 
+/* Adding icons to input field */
 .input-bill {
     background-image: url(./images/icon-dollar.svg);
 }
@@ -71,6 +80,7 @@ input[type="number"] {
     background-image: url(./images/icon-person.svg);
 }
 
+/* Adding flexbox to tip section */
 section form {
     display: flex;
     flex-flow: row wrap;
@@ -83,6 +93,7 @@ section form input:last-child {
     color: var(--dark-grayish-cyan);
 }
 
+/* Calculation section */
 .total-container {
     background-color: var(--very-dark-cyan);
     border-radius: 10px;
@@ -102,10 +113,17 @@ ul li {
     background-color: var(--strong-cyan);
     color: var(--very-dark-cyan);
     font-size: 1.2rem;
+    margin-top: 1rem;
+}
+
+/* Adding flexbox to tip and total calculation section */
+.tip-per-person, .total-per-person {
+    display: flex;
 }
 
 .tip-per-person li:first-child, .total-per-person li:first-child {
     color: var(--white);
+    margin-top: 0.5rem;
 }
 
 .tip-per-person li:last-child, .total-per-person li:last-child {
@@ -116,4 +134,9 @@ ul li {
 .tip-to-pay, .total-to-pay {
     color: var(--strong-cyan);
     font-size: 2rem;
+    margin-left: auto;
+}
+
+.total-per-person {
+    margin: 1rem 0;
 }

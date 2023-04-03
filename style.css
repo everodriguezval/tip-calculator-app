@@ -61,10 +61,6 @@ input[type="button"] {
     transition: 0.5s; 
 }
 
-input[type="button"]:focus {
-    background-color: var(--strong-cyan);
-}
-
 input[type="number"] {
     width: 98%; 
     margin-bottom: 1.5rem; 
@@ -84,6 +80,9 @@ input[type="number"] {
     margin-bottom: 0;
 }
 
+.filtered.tip-selected {
+    background-color: var(--strong-cyan);
+}
 /* Adding icons to input field */
 .input-bill {
     background-image: url(./images/icon-dollar.svg);

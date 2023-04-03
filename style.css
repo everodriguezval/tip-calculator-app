@@ -14,10 +14,10 @@
     margin: 0;
     padding: 0;
     box-sizing: 0;
+    font-family: 'Space Mono', monospace;
 }
 
 body {  
-    font-family: 'Space Mono', monospace;
     /* font-size: 24px; */
     background-color: var(--light-grayish-cyan);
 }
@@ -36,4 +36,36 @@ main {
 
 section h3 {
     color: var(--dark-grayish-cyan);
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+}
+
+section input {
+    font-size: 24px;
+    font-weight: 700;
+    border: none;
+    border-radius: 10px;
+    background-color: var(--very-light-cyan);
+}
+
+input[type="button"] {
+    background-color: var(--very-dark-cyan);
+    color: var(--white);   
+    padding: 0.5rem 2rem; 
+}
+
+input[type="number"] {
+    width: 100%; 
+    margin-bottom: 2rem; 
+    background-repeat: no-repeat;
+    background-position: 15px 15px;
+    padding: 0.4rem;
+}
+
+.input-bill {
+    background-image: url(./images/icon-dollar.svg);
+}
+
+.input-number-people {
+    background-image: url(./images/icon-person.svg);
 }

@@ -70,11 +70,16 @@ function getNumberOfPeople(e) {
 }
 
 function tipCalculation() {
-    tipTotal = inputBillValue * ((tipNumber / 100).toFixed(2)) / numberOfpeople;
-    totalPerPerson = inputBillValue / numberOfpeople + tipTotal;
-    displayTipAmount(tipTotal);
-    displayTotal(totalPerPerson);
+    if (numberOfpeople != 0) {
+        tipTotal = inputBillValue * (tipNumber / 100) / numberOfpeople;
+        totalPerPerson = inputBillValue / numberOfpeople + tipTotal;
+        return displayTipAmount(tipTotal.toFixed(2)), displayTotal(totalPerPerson.toFixed(2));
+    } else {
+        return console.log('At least a value is 0');
+    }  
 }
+
+// Displaying content 
 
 function displayTipAmount(tiptotalPara) {
     tipAmount.innerHTML = tiptotalPara;
@@ -84,15 +89,16 @@ function displayTotal(totalPerPersonPara) {
     totalToPay.innerHTML = totalPerPersonPara;
 }
 
+// Reseting values
 function reset() {
     inputBill.value = "";
-    inputBillValue = 0;
-    tipNumber = 0;
+    inputBillValue = 0.00;
+    tipNumber = 0.00;
     customTip.innerHTML = "";
     inputPeople.value = "";
     numberOfpeople = 0;
-    tipAmount.innerHTML = 0.00;
-    totalToPay.innerHTML = 0.00;
+    tipAmount.innerHTML = "0.00";
+    totalToPay.innerHTML = "0.00";
     buttonItems.forEach(button => {
         if (button.classList.contains('tip-selected')) {
             button.classList.remove('tip-selected')

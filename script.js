@@ -22,11 +22,16 @@ buttonItems.forEach(button => {
     button.addEventListener('click', btnClicked);
 }); 
 
-function btnClicked(e) {
-    if (e.target.classList.contains('filtered')) {
-        e.target.classList.toggle('tip-selected');
-    }
-}
+// Function to add customisation to button clicked
+function btnClicked(event) {
+    buttonItems.forEach(function(button) {
+        button.classList.remove('tip-selected');
+        if (event.target.value === button.value) {
+            button.classList.add('tip-selected')
+        }
+    })
+};
+
 
 // Selecting element from the DOM function
 function getElement(identifier) {

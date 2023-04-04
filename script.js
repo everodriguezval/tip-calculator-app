@@ -29,7 +29,8 @@ function btnClicked(event) {
         if (event.target.value === button.value) {
             button.classList.add('tip-selected')
         }
-    })
+    });
+    tipCalculation();
 };
 
 
@@ -75,17 +76,16 @@ function getNumberOfPeople(e) {
 }
 
 function tipCalculation() {
-    if (numberOfpeople != 0) {
+    if (numberOfpeople != 0 && numberOfpeople != null) {
         tipTotal = inputBillValue * (tipNumber / 100) / numberOfpeople;
         totalPerPerson = inputBillValue / numberOfpeople + tipTotal;
-        return displayTipAmount(tipTotal.toFixed(2)), displayTotal(totalPerPerson.toFixed(2));
+        displayTipAmount(tipTotal.toFixed(2)), displayTotal(totalPerPerson.toFixed(2));
     } else {
-        return console.log('At least a value is 0');
+        console.log('At least a value is 0');
     }  
 }
 
 // Displaying content 
-
 function displayTipAmount(tiptotalPara) {
     tipAmount.innerHTML = tiptotalPara;
 }

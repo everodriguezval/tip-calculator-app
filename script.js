@@ -30,9 +30,7 @@ function btnClicked(event) {
             button.classList.add('tip-selected')
         }
     });
-    tipCalculation();
 };
-
 
 // Selecting element from the DOM function
 function getElement(identifier) {
@@ -47,8 +45,7 @@ function getElement(identifier) {
 // Grabbing bill value function
 function getBillNumber(e) {
     inputBillValue = Number(e.target.value);
-    console.log(inputBillValue);
-    return inputBillValue;
+    tipCalculation()
 }
 
 // Grabbing tip value function
@@ -57,22 +54,21 @@ function getTipNumber(e) {
     if (tipPercentage != 0) {
         tipNumber = Number(tipPercentage.substring(0, tipPercentage.length - 1));       
         console.log(tipNumber);
-        return tipNumber;
+        tipCalculation();
     } else {
         // console.log('User selected custom tip');
         customTip.addEventListener('input', (e) => {
-            tipNumber = Number(e.target.value);           
-            return tipNumber;
+            tipNumber = Number(e.target.value);
+            tipCalculation();           
         });       
-    }
+    }  
 }
 
 // Grabbing number of people function
 function getNumberOfPeople(e) {
     numberOfpeople = Number(e.target.value);
     // console.log(numberOfpeople);
-    tipCalculation();
-    return numberOfpeople;
+    tipCalculation()
 }
 
 function tipCalculation() {

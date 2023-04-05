@@ -193,7 +193,11 @@ ul li {
     }
 
     #reset-btn {
-        margin-top: 12rem;
+        margin-top: 10rem;
+    }
+
+    .people-container {
+        margin: 0;
     }
 
     div section .input-number-people {

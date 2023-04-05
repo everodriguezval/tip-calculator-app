@@ -15,49 +15,55 @@
     </header>
     <main>
         <!-- Total bill section -->
-        <div class="input-panel">
-            <section>
-                <h3>Bill</h3>
-                <input class="input-bill" type="number" min="1">
-            </section>
-            <!-- Select tip section -->
-            <section>
-                <h3>Select Tip %</h3>
-                <form action="#" class="btn-tip-container">
-                    <input class="filtered" type="button" value="5%">
-                    <input class="filtered" type="button" value="10%">
-                    <input class="filtered" type="button" value="15%">
-                    <input class="filtered" type="button" value="25%">
-                    <input class="filtered" type="button" value="50%">
-                    <input type="number" value="custom" placeholder="Custom" id="custom-tip">
+        <div class="main-container">
+            <div class="input-panel">
+                <section>
+                    <h3>Bill</h3>
+                    <form action="#">
+                        <input class="input-bill" type="number" min="1">
+                    </form>
+                </section>
+                <!-- Select tip section -->
+                <section>
+                    <h3>Select Tip %</h3>
+                    <form action="#" class="btn-tip-container">
+                        <input class="filtered" type="button" value="5%">
+                        <input class="filtered" type="button" value="10%">
+                        <input class="filtered" type="button" value="15%">
+                        <input class="filtered" type="button" value="25%">
+                        <input class="filtered" type="button" value="50%">
+                        <input type="number" value="custom" placeholder="Custom" id="custom-tip">
+                    </form>
+                </section>
+                <!-- Number of people section -->
+                <section>
+                    <h3>Number of People</h3>
+                    <form action="#">
+                        <input class="input-number-people" type="number" min="1">
+                    </form>
+                </section>
+            </div>
+            <!-- Calculation section -->
+            <section class="total-container">
+                <div class="tip-per-person">
+                    <ul>
+                        <li>Tip Amount</li>               
+                        <li>/ person</li>
+                    </ul>
+                    <div class="tip-to-pay">$<span>0.00</span></div>
+                </div>
+                <div class="total-per-person">
+                    <ul>
+                        <li>Total</li>
+                        <li>/ person</li>
+                    </ul>
+                    <div class="total-to-pay">$<span>0.00</span></div>
+                </div>
+                <form action="#">
+                    <input id="reset-btn" type="button" value="RESET">
                 </form>
             </section>
-            <!-- Number of people section -->
-            <section>
-                <h3>Number of People</h3>
-                <input class="input-number-people" type="number" min="1">
-            </section>
         </div>
-        <!-- Calculation section -->
-        <section class="total-container">
-            <div class="tip-per-person">
-                <ul>
-                    <li>Tip Amount</li>               
-                    <li>/ person</li>
-                </ul>
-                <div class="tip-to-pay">$<span>0.00</span></div>
-            </div>
-            <div class="total-per-person">
-                <ul>
-                    <li>Total</li>
-                    <li>/ person</li>
-                </ul>
-                <div class="total-to-pay">$<span>0.00</span></div>
-            </div>
-            <form action="#">
-                <input id="reset-btn" type="button" value="RESET">
-            </form>
-        </section>
     </main>
 </body>
 </html>

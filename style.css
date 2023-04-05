@@ -29,7 +29,7 @@ header img {
 }
 
 /* Main section */
-main {
+.main-container {
     background-color: var(--white);
     padding: 2rem;
     border-top-right-radius: 20px;
@@ -170,7 +170,7 @@ ul li {
         margin: 4rem auto;
     }
 
-    main {
+    .main-container {
         display: flex;
         justify-content: space-between;
         gap: 3rem;
@@ -193,7 +193,7 @@ ul li {
     }
 
     #reset-btn {
-        margin-top: 8rem;
+        margin-top: 12rem;
     }
 
     div section .input-number-people {

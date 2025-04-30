@@ -90,7 +90,7 @@ function getTipNumber(e) {
 
 ## Author
 
-- Website - Evelyn Valenzuela (https://evelynvalenzuela.com/)
+- Website - Evelyn Valenzuela (https://everodriguezval.github.io/portfolio/)
 - Frontend Mentor - Oliver Cadman (https://github.com/OliverCadman)
 
 
